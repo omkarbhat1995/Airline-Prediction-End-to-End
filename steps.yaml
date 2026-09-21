@@ -1,0 +1,4 @@
+create ENV
+  pip install virtualenv
+  virtualenv -p python3 myEnv_01
+  myEnv_01\Scripts\activate
