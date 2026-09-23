@@ -1,5 +1,5 @@
 from flask import Flask , request, render_template
-
+from src.pipeline.prediction_pipeline import CustomData
 app= Flask(__name__)
 
 app.route("/")
@@ -12,7 +12,7 @@ def predict():
     if request.method==["GET"]:
         return render_template("home.html")
 
-        custom_Data = CustomData()
+    custom_Data = CustomData()
     df = custom_Data.receiveDataFromWeb(
         Airline=request.form.get("Airline"),
         Date_of_Journey=request.form.get("Dep_Time"),
