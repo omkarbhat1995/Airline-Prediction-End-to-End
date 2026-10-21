@@ -27,13 +27,48 @@ An end-to-end machine learning pipeline designed to predict airline flight price
 ```text
 Airline-Prediction-End-to-End/
 │
-├── data/                   # Raw and processed datasets
+├── data/                   # Raw and processed datasets # Empty
 ├── notebooks/              # Jupyter notebooks for EDA and model experimentation
 ├── src/                    # Source code for data pipelines and ML models
-│   ├── data_ingestion.py   
-│   ├── data_preprocessing.py
+│   ├── components/
+│       ├── Step_01_Cleaning.py
+│       ├── Step_02_Transformation.py
+│       ├── Step_03_Training.py
+│       ├── Step_04_Prediction.py         
+│   ├── pipeline
+│       ├── prediction_pipeline.py
+│       ├── training_pipeline.py
 │   └── model_training.py
+├── templates/
+│   └── home.html
 ├── app.py                  # Streamlit web application script
-├── model.pkl               # Pickled machine learning model
 ├── requirements.txt        # Python dependencies
+├── setup.py                # setup file
+├── steps.yaml              # Steps to setup
 └── README.md               # Project documentation
+```
+## ⚙️ Installation & Usage
+1.Clone the repository:
+```bash
+git clone [https://github.com/omkarbhat1995/Airline-Prediction-End-to-End.git](https://github.com/omkarbhat1995/Airline-Prediction-End-to-End.git)
+cd Airline-Prediction-End-to-End
+```
+2.Create a virtual environment (Recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
+3.Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+4.Run the application:
+```bash
+streamlit run app.py
+```
+## 👤 Author
+Omkar Bhat
+
+[Portfolio](https://omkarbhat1995.github.io/)
+
+GitHub: @omkarbhat1995
